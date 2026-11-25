@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="700" viewBox="0 0 700 700">
+  <defs>
+    <filter id="hide" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="5" seed="33" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+    </filter>
+    <linearGradient id="burgundy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7A2734"/>
+      <stop offset="55%" stop-color="#651E2B"/>
+      <stop offset="100%" stop-color="#3B131B"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="700" fill="url(#burgundy)"/>
+  <rect width="700" height="700" filter="url(#hide)" opacity="0.5"/>
+</svg>

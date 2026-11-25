@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <filter id="parch" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="5" seed="9" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
+    </filter>
+    <filter id="stain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008" numOctaves="3" seed="18" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.42 0 0 0 0 0.29 0 0 0 0 0.14 0 0 0 0.5 0"/>
+    </filter>
+    <radialGradient id="paper" cx="48%" cy="45%" r="78%">
+      <stop offset="0%" stop-color="#EDE1C9"/>
+      <stop offset="70%" stop-color="#DCCBA8"/>
+      <stop offset="100%" stop-color="#B9A27C"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#paper)"/>
+  <rect width="1200" height="800" filter="url(#stain)" opacity="0.5"/>
+  <g fill="none" stroke="#7A6444" stroke-opacity="0.25" stroke-width="2">
+    <path d="M0 180 Q160 120 300 200 T620 190 T900 230 T1200 170"/>
+    <path d="M0 340 Q180 270 340 350 T700 330 T1000 380 T1200 320"/>
+    <path d="M0 520 Q200 440 380 540 T760 500 T1040 560 T1200 500"/>
+    <path d="M0 690 Q190 610 360 700 T740 660 T1010 720 T1200 660"/>
+    <path d="M180 0 Q120 180 210 360 T170 800"/>
+    <path d="M500 0 Q440 200 540 400 T490 800"/>
+    <path d="M860 0 Q800 190 900 410 T850 800"/>
+  </g>
+  <g fill="none" stroke="#6C5334" stroke-opacity="0.35">
+    <circle cx="1010" cy="140" r="76" stroke-width="2"/>
+    <circle cx="1010" cy="140" r="56" stroke-width="1"/>
+    <path d="M1010 40v200M910 140h200M1010 46l9 27-9 9-9-9z" stroke-width="2"/>
+  </g>
+  <rect width="1200" height="800" filter="url(#parch)" opacity="0.45"/>
+</svg>
